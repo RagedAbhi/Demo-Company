@@ -1,38 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .App {
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 200vh;
+    --primary-color: #1D1F25;
+    --secondary-color: #FFBB29;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* NAVBAR */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+
+    height: 103px;
+    /* border-bottom: 1px solid rgb(255, 255, 255, 0.15); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#logo {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--secondary-color);
+    opacity: 100%;
+    line-height: 100%;
+    margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navlist {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 650px;
 }
 
-.App-link {
-  color: #61dafb;
+#yellow {
+    color: var(--secondary-color);
+    opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navlist li {
+    opacity: 60%;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.navlist li:hover {
+    color: var(--secondary-color);
+    opacity: 100%;
+}
+
+
+.iconlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 180px;
+}
+
+.iconlist img:nth-child(3) {
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+/* TOPBAR */
+.topbar {
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-left: 40px;
+    height: 215px;
+
+    border-top: 1px solid rgb(255, 255, 255, 0.15);
+
+}
+
+.topbar p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.searchline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.searchbox {
+    display: flex;
+    width: 448px;
+    height: 45px;
+    align-items: center;
+    justify-content: left;
+
+    background: #282C38;
+    border-radius: 6px;
+}
+
+
+.searchbox input {
+    background-color: #282C38;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: white;
+    width: inherit;
+
+    border: none;
+    outline: none;
+}
+
+.searchbox input::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #757B8C;
+}
+
+.filtericons {
+    display: flex;
+    justify-content: space-between;
+    width: 102px;
+}
+
+.twobar {
+    width: 43px;
+    height: 43px;
+    background: #282C38;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.twobar:hover>.upbar {
+    background: var(--secondary-color);
+}
+
+.twobar:hover>.downbar {
+    background: var(--secondary-color);
+}
+
+.upbar {
+    height: 8.5px;
+    width: 13px;
+    border-radius: 2px;
+    background: #757B8C;
+    margin-left: 12px;
+}
+
+.downbar {
+    height: 8.5px;
+    width: 20px;
+    border-radius: 2px;
+    background: #757B8C;
+    margin-left: 12px;
+    margin-top: 3px;
+}
+
+.yelbox {
+    width: 43px;
+    height: 43px;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bbox {
+    height: 8.5px;
+    width: 8.5px;
+    margin: 1.5px;
+    border-radius: 2px;
+    background: #141518;
+}
+
+/* MAIN */
+
+.categories {
+    margin: 40px 0;
+    color: white;
+    width: 955px;
+}
+
+.categories ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#all {
+    color: #141518;
+    background-color: var(--secondary-color);
+    opacity: 100%;
+}
+
+.categories li {
+    list-style: none;
+    padding: 13px 25px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    opacity: 60%;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.categories li:hover {
+    color: var(--secondary-color);
+    opacity: 100%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* column-gap: 20px; */
+    padding: 0 30px;
+}
+
+
+/* Card part */
+.cardbox {
+    width: 345px;
+    height: 454px;
+    color: white;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+
+    background: #1D1F25;
+    border-radius: 10px;
+}
+
+.cardbox img {
+    width: 345px;
+    height: 200px;
+}
+
+.cardContent {
+    padding: 20px 16px;
+    height: 214px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardCategory {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardCategory span {
+    color: rgb(255, 255, 255, 0.6);
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+#category {
+    color: var(--secondary-color);
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 8px;
+}
+
+.cardContent p {
+    margin: 0;
+}
+
+.cardContent p:nth-child(2) {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.cardContent p:nth-child(3) {
+    color: #B5B5BE;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.lastLine {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.lastLine p {
+    color: var(--secondary-color);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.lastLine p:hover {
+    font-size: 15px;
+    text-decoration: underline;
 }

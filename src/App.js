@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Topbar from './components/Topbar';
+import Main from './components/Main';
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet"></link>
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Topbar />
+      <Main />
     </div>
   );
 }
